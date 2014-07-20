@@ -1,0 +1,4 @@
+SilentMedia.js
+==============
+
+Audio library
