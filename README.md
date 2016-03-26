@@ -1,4 +1,4 @@
 SilentMedia.js
 ==============
 
-Audio library
+Sandbox testing project,

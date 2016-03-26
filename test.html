@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+
+        <script src="flac.js"></script>
+    </head>
+    <body>
+
+        <script>
+            var request = new XMLHttpRequest();
+            request.open("GET", "file.flac", true);
+
+            request.responseType = 'arraybuffer';
+
+            request.onload = function() {
+                window.data = this.response;
+                var flac = new FLACDecoder(this.response);
+
+                var d = flac.parse();
+
+                console.log(d);
+                console.log(JSON.stringify(d));
+            };
+
+            request.send();
+
+        </script>
+    </body>
+</html>
